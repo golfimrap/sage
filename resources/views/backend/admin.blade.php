@@ -228,7 +228,7 @@
 	<hr>
 
 	<h3><center>Add VDO NEWS</center></h3><br/>
-	<form method="post" action="{{ route('form.insertnews') }}">
+	<form method="post" action="{{ route('form.insertnewsvdo') }}">
 		{{ csrf_field() }}
 		<label>หัวข้อข่าว :: </label><br/>
 		<textarea name="topic_news"></textarea><br/>
@@ -236,15 +236,30 @@
 		<input type="txt" name="name"><br/>
 		<label>วันที่ :: </label>
 		<input type="txt" name="date_news"><br/>
-		<label>URL :: </label><br/>
-		<label>ประเภทข้อมูล :: </label>
-		<select name="type">
-			<option value="text">ข้อความ</option>
-			<option value="vdo">vdo</option>
-		</select>
+		<label>URL VDO :: </label>
 		<input type="text" name="url"><br/>
+		<label>ประเภทข้อมูล :: VDO</label>
+		<input type="hidden" name="type" value="vdo"><br/>
 		<input type="submit" value="submit">
 	</form>
+	<br/><hr>
+	<h3><center>Add TEXT NEWS</center></h3><br/>
+	<form method="post" action="{{ route('form.insertnewstext') }}" enctype="multipart/form-data">
+		{{ csrf_field() }}
+		<label>หัวข้อข่าว :: </label><br/>
+		<textarea name="topic_news"></textarea><br/>
+		<label>ผู้ให้ข่าว :: </label>
+		<input type="txt" name="name"><br/>
+		<label>วันที่ :: </label>
+		<input type="txt" name="date_news"><br/>
+		<label>URL ข่าว :: </label>
+		<input type="text" name="url"><br/>
+		<label>รูปภาพข่าว :: </label>
+		<input type="file" name="news_pic"><br/>
+		<label>ประเภทข้อมูล :: ข้อความ</label>
+		<input type="hidden" name="type" value="text"><br/>
+		<input type="submit" value="submit">
+	</form><br/><br/>
 </body>
 </html>
 <script type="text/javascript">

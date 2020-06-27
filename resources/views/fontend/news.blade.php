@@ -65,7 +65,28 @@
 			</div>
 			<hr>
 			<div class="row">
-
+				@foreach($data_news_text as $value_news_text)
+					<div class="col-lg-4 col-md-6 col-sm-10">
+						<div class="single-services mb-200">
+							<div class="services-img">
+								<a href="{{ $value_news_text->url }}" target="_blank">
+									<img src="{{URL::asset('storage/img/news/'.$value_news_text->news_pic)}}" alt="" width="100%">
+								</a>
+							</div>
+							<div class="services-caption">
+								<a href="{{ URL::to('$value_news_text->url') }}" target="_blank">
+									<p class="pera1">
+										<b>หัวข้อข่าว ::</b> {{ $value_news_text->topic_news }}
+									</p>
+									<p class="pera2">
+										<b>โดย :: </b> {{ $value_news_text->name }}<br/>
+										<b>อัพเดท ณ วันที่ :: </b> {{ $value_news_text->date_news }}
+									</p>
+								</a>
+							</div>
+						</div>
+					</div>
+				@endforeach
 			</div>
 		</div>
 	</div>

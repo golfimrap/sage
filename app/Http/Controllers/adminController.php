@@ -224,15 +224,16 @@ class adminController extends Controller
     	return redirect()->route('admin');
     }
 
-    public function InsertNews(Request $req)
+    public function InsertNewsVDO(Request $req)
     {
 
         $rules = [
             'topic_news'    =>  'required',
             'name'          =>  'required',
             'date_news'     =>  'required',
-            'type'          =>  'required',
-            'url'           =>  'required'
+            'url'           =>  'required',
+            'type'          =>  'required'
+            
         ];
 
         $validator = Validator::make($req->all(), $rules);
@@ -249,8 +250,61 @@ class adminController extends Controller
                     'topic_news'    =>  $req->post('topic_news'),
                     'name'          =>  $req->post('name'),
                     'date_news'     =>  $req->post('date_news'),
-                    'type'          =>  $req->post('type'),
-                    'url'           =>  $req->post('url')
+                    'url'           =>  $req->post('url'),
+                    'type'          =>  $req->post('type')
+                );
+
+        DBnews::insert($data);
+
+        return redirect()->route('admin');
+    }
+
+    public function InsertNewsText(Request $req)
+    {
+        $rules = [
+            'topic_news'    =>  'required',
+            'name'          =>  'required',
+            'date_news'     =>  'required',
+            'url'           =>  'required',
+            'news_pic'      =>  'required',
+            'type'          =>  'required'
+            
+        ];
+
+        $validator = Validator::make($req->all(), $rules);
+
+        if ($validator->fails()) {
+            return response()->json([
+                'status'    =>  'error',
+                'message'   =>  'error_require_data'
+            ]);
+        }
+
+        if($req->hasFile('news_pic')){
+            // cache the file
+            $file_news_pic = $req->file('news_pic');
+            if (!$file_news_pic->isValid()){ // now check if it's valid
+                return back()->with('error', $file->getErrorMessage());
+            }
+            // generate a new filename. getClientOriginalExtension() for the file extension
+            $filename_news_pic = time(). '.' . $file_news_pic->getClientOriginalExtension();
+            // save to storage/app/photos as the new $filename
+            // dd($filename_person_pic);
+            $upload = $file_news_pic->storeAs('public/img/news', $filename_news_pic);
+            // dd($filename_poster_pic);
+        }else{
+            $filename_news_pic = NULL;
+            // dd($filename_poster_pic);
+        }
+
+        $data = array
+                (
+                    'topic_news'    =>  $req->post('topic_news'),
+                    'name'          =>  $req->post('name'),
+                    'date_news'     =>  $req->post('date_news'),
+                    'url'           =>  $req->post('url'),
+                    'news_pic'      =>  $filename_news_pic,
+                    'type'          =>  $req->post('type')
                 );
 
         DBnews::insert($data);
