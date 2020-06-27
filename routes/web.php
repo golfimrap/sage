@@ -23,6 +23,7 @@ Route::get('/caption', 'captionController@GetData')->name('caption');
 Route::get('/gallery', 'galleryController@GetData')->name('gallery');
 Route::get('/timeline', 'timelineController@GetData')->name('timeline');
 Route::get('/contact', 'contactController@GetData')->name('contact');
+Route::get('/news', 'newsController@GetData')->name('news');
 
 Route::get('/admin', 'adminController@GetData')->name('admin');
 
