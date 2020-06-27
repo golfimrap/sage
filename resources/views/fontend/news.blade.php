@@ -44,19 +44,19 @@
 				</div>
 			</div>
 			<div class="row">
-				@foreach($data_news as $value_news)
+				@foreach($data_news_vdo as $value_news_vdo)
 					<div class="col-lg-4 col-md-6 col-sm-10">
 						<div class="single-services mb-200">
 							<div class="services-img">
-								<iframe width="100%" height="370" src="{{ $value_news->url }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								<iframe width="100%" height="370" src="{{ $value_news_vdo->url }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 							</div>
 							<div class="services-caption">
 								<p class="pera1">
-									<b>หัวข้อข่าว ::</b> {{ $value_news->topic_news }}
+									<b>หัวข้อข่าว ::</b> {{ $value_news_vdo->topic_news }}
 								</p>
 								<p class="pera2">
-									<b>โดย :: </b> {{ $value_news->name }}<br/>
-									<b>อัพเดท ณ วันที่ :: </b> {{ $value_news->date_news }}
+									<b>โดย :: </b> {{ $value_news_vdo->name }}<br/>
+									<b>อัพเดท ณ วันที่ :: </b> {{ $value_news_vdo->date_news }}
 								</p>
 							</div>
 						</div>
@@ -65,7 +65,7 @@
 			</div>
 			<hr>
 			<div class="row">
-				
+
 			</div>
 		</div>
 	</div>

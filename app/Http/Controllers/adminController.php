@@ -231,6 +231,7 @@ class adminController extends Controller
             'topic_news'    =>  'required',
             'name'          =>  'required',
             'date_news'     =>  'required',
+            'type'          =>  'required',
             'url'           =>  'required'
         ];
 
@@ -248,6 +249,7 @@ class adminController extends Controller
                     'topic_news'    =>  $req->post('topic_news'),
                     'name'          =>  $req->post('name'),
                     'date_news'     =>  $req->post('date_news'),
+                    'type'          =>  $req->post('type'),
                     'url'           =>  $req->post('url')
                 );
 

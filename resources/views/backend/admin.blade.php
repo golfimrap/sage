@@ -236,7 +236,12 @@
 		<input type="txt" name="name"><br/>
 		<label>วันที่ :: </label>
 		<input type="txt" name="date_news"><br/>
-		<label>URL VDO :: </label>
+		<label>URL :: </label><br/>
+		<label>ประเภทข้อมูล :: </label>
+		<select name="type">
+			<option value="text">ข้อความ</option>
+			<option value="vdo">vdo</option>
+		</select>
 		<input type="text" name="url"><br/>
 		<input type="submit" value="submit">
 	</form>
