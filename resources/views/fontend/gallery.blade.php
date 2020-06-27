@@ -7,7 +7,7 @@
 				<div class="row">
 					<div class="col-xl-12">
 						<div class="hero-cap hero-cap2 text-center pt-80">
-							<h2 style="color: black;">Gallery</h2>
+							<h2>Gallery</h2>
 						</div>
 					</div>
 				</div>

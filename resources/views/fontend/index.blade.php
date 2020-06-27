@@ -47,12 +47,10 @@
                 <div class="col-lg-4 col-md-6 col-sm-10">
                     <div class="single-services mb-200">
                         <div class="services-img">
-                            <a href="{{ route('timeline') }}">
-                                <img src="assets/img/pic/timeline.jpg" alt="">
-                            </a>
+                            <img src="assets/img/pic/timeline.jpg" alt="">
                         </div>
                         <div class="services-caption">
-                            <h3><a href="{{ route('timeline') }}">Timeline</a></h3>
+                            <h3><a href="assets/img/pic/timeline.jpg">Timeline</a></h3>
                             <p class="pera1">ไทม์ไลน์</p>
                             <p class="pera2">ไทม์ไลน์</p>
                         </div>
