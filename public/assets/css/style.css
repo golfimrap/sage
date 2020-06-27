@@ -2728,8 +2728,8 @@ hero-btn {
 
 /* line 777, ../../../sponDon TI/Running Project/263.InteriorDesign_HTML/HTML/assets/scss/_common.scss */
 .w-padding2 {
-  padding-top: 70px;
-  padding-bottom: 70px;
+  /*padding-top: 70px;*/
+  /*padding-bottom: 70px;*/
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
