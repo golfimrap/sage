@@ -60,7 +60,9 @@
 					<div class="col-lg-4 col-md-6 col-sm-10">
 						<div class="single-services mb-200">
 							<div class="services-img">
-								<img src="{{URL::asset('storage/img/consult/'.$value_advisor->advisor_pic)}}" alt="">
+								<a href="{{URL::asset('storage/img/consult/'.$value_advisor->advisor_pic)}}">
+									<img src="{{URL::asset('storage/img/consult/'.$value_advisor->advisor_pic)}}" alt="">
+								</a>
 							</div>
 							<div class="services-caption">
 								<h3><a href="{{URL::asset('storage/img/consult/'.$value_advisor->advisor_pic)}}">{{ $value_advisor->prefix }}{{ $value_advisor->name }} {{ $value_advisor->surname }}</a></h3>
@@ -98,19 +100,6 @@
 			</div>
 		</div>
 	</div> -->
-	<section class="wantToWork-area w-padding2">
-		<div class="container">
-			<div class="row align-items-center justify-content-between">
-				<div class="col-xl-8 col-lg-8 col-md-8">
-					<div class="wantToWork-caption wantToWork-caption2">
-						<h2>Advisory Board of the Minister of Public Health</h2>
-					</div>
-				</div>
-				<div class="col-xl-2 col-lg-2 col-md-3">
-					<a href="#" class="btn btn-black f-right">Contact Us</a>
-				</div>
-			</div>
-		</div>
-	</section>
+	@include('layouts.template.beforefooter')
 </main>
 @endsection

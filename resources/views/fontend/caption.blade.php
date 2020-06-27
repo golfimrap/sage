@@ -46,5 +46,6 @@
 			</div>
 		</div>
 	</div>
+	@include('layouts.template.beforefooter')
 </main>
 @endsection

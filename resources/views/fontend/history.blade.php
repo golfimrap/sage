@@ -29,7 +29,9 @@
 					<div class="col-lg-4 col-md-6 col-sm-10">
 						<div class="single-services mb-200">
 							<div class="services-img">
-								<img src="{{URL::asset('storage/img/consult/'.$value_advisor->advisor_pic)}}" alt="">
+								<a href="{{URL::asset('storage/img/consult/'.$value_advisor->advisor_pic)}}">
+									<img src="{{URL::asset('storage/img/consult/'.$value_advisor->advisor_pic)}}" alt="">
+								</a>
 							</div>
 							<div class="services-caption">
 								<h3><a href="{{URL::asset('storage/img/consult/'.$value_advisor->advisor_pic)}}">{{ $value_advisor->prefix }}{{ $value_advisor->name }} {{ $value_advisor->surname }}</a></h3>
@@ -42,5 +44,6 @@
 			</div>
 		</div>
 	</div>
+	@include('layouts.template.beforefooter')
 </main>
 @endsection

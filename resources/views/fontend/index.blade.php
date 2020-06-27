@@ -134,5 +134,6 @@
         </div>
     </div>
     <!-- Services Ara End -->
+    @include('layouts.template.beforefooter')
 </main>
 @endsection
