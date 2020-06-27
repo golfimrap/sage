@@ -17,10 +17,14 @@
 						<div class="home-blog-single mb-30">
 							<div class="blog-img-cap">
 								<div class="blog-img">
-									<img src="{{URL::asset('storage/img/poster/'.$value_poster->poster_pic)}}" alt="">
+									<a href="{{URL::asset('storage/img/poster/'.$value_poster->poster_pic)}}">
+										<img src="{{URL::asset('storage/img/poster/'.$value_poster->poster_pic)}}" alt="" height="360">
+									</a>
 								</div>
 								<ul>
-									<li class="black-bg">{{ $value_poster->poster_date }}</li>
+									<a href="{{URL::asset('storage/img/poster/'.$value_poster->poster_pic)}}">
+										<li class="black-bg">{{ $value_poster->poster_date }}</li>
+									</a>
 									<!-- <li>By Admin   -   30 Likes   -   4 Comments</li> -->
 								</ul>
 								<div class="blog-cap">
