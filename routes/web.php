@@ -25,7 +25,6 @@ Route::get('/timeline', 'timelineController@GetData')->name('timeline');
 Route::get('/contact', 'contactController@GetData')->name('contact');
 
 Route::get('/admin', 'adminController@GetData')->name('admin');
-Route::post('/InsertMenuHome', 'adminController@InsertMenuHome')->name('form.insertmenuhome');
 
 Route::post('/insertAdvisor', 'adminController@InsertData')->name('form.insertadvisor');
 Route::get('deleteAdvisor/{id}', 'adminController@DestroyAdvisor')->name('deleteAdvisor');
