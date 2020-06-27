@@ -21,6 +21,7 @@ Route::get('/history', 'historyController@GetData')->name('history');
 Route::get('/poster', 'posterController@GetData')->name('poster');
 Route::get('/caption', 'captionController@GetData')->name('caption');
 Route::get('/gallery', 'galleryController@GetData')->name('gallery');
+Route::get('/timeline', 'timelineController@GetData')->name('timeline');
 
 Route::get('/admin', 'adminController@GetData')->name('admin');
 Route::post('/InsertMenuHome', 'adminController@InsertMenuHome')->name('form.insertmenuhome');

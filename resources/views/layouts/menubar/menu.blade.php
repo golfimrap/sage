@@ -19,7 +19,7 @@
                                         <li><a href="{{ route('history') }}">ที่ปรึกษา</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">ไทม์ไลน์</a></li>
+                                <li><a href="{{ route('timeline') }}">ไทม์ไลน์</a></li>
                                 <li><a>เอกสารเผยแพร่</a>
                                     <ul class="submenu">
                                         <li><a href="{{ URL::to('https://fliphtml5.com/bookcase/dmkfb') }}" target="_blank">บทความ</a></li>

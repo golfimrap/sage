@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="{{URL::asset('assets/css/nice-select.css')}}">
     <link rel="stylesheet" href="{{URL::asset('assets/css/style.css')}}">
 
+    @yield('timelinecss')
 </head>
 <body class="body-bg">
 	@include('layouts.menubar.menu')
