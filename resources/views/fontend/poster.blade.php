@@ -25,7 +25,7 @@
 								</ul>
 								<div class="blog-cap">
 									<h3><a href="{{URL::asset('storage/img/poster/'.$value_poster->poster_pic)}}">{{ $value_poster->topic }}</a></h3>
-									<a href="#" class="more-btn">Read more</a>
+									<a href="{{URL::asset('storage/img/poster/'.$value_poster->poster_pic)}}" class="more-btn">Read more</a>
 								</div>
 							</div>
 						</div>
