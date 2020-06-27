@@ -35,7 +35,7 @@
                     </div>
                     <!-- Header-btn -->
                     <div class="header-btns d-none d-lg-block f-right">
-                        <a href="#" class="btn header-btn">ติดต่อเรา</a>
+                        <a href="{{ route('contact') }}" class="btn header-btn">ติดต่อเรา</a>
                     </div>
                     <!-- Mobile Menu -->
                     <div class="col-12">
