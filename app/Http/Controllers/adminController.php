@@ -8,6 +8,7 @@ use App\DBadvisor;
 use App\DBposter;
 use App\DBcaption;
 use App\DBgallery;
+use App\DBnews;
 use Validator;
 use redirect;
 use File;
@@ -221,6 +222,38 @@ class adminController extends Controller
 	    DBgallery::insert($data);
 
     	return redirect()->route('admin');
+    }
+
+    public function InsertNews(Request $req)
+    {
+
+        $rules = [
+            'topic_news'    =>  'required',
+            'name'          =>  'required',
+            'date_news'     =>  'required',
+            'url'           =>  'required'
+        ];
+
+        $validator = Validator::make($req->all(), $rules);
+
+        if ($validator->fails()) {
+            return response()->json([
+                'status'    =>  'error',
+                'message'   =>  'error_require_data'
+            ]);
+        }
+
+        $data = array
+                (
+                    'topic_news'    =>  $req->post('topic_news'),
+                    'name'          =>  $req->post('name'),
+                    'date_news'     =>  $req->post('date_news'),
+                    'url'           =>  $req->post('url')
+                );
+
+        DBnews::insert($data);
+
+        return redirect()->route('admin');
     }
 
     public function DestroyAdvisor($id)

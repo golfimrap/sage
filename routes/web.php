@@ -38,3 +38,5 @@ Route::get('deleteCaption/{id}', 'adminController@DestroyCaption')->name('delete
 
 Route::post('/insertGallery', 'adminController@InsertGallery')->name('form.insertgallery');
 Route::get('deleteGallery/{id}', 'adminController@DestroyGallery')->name('deleteGallery');
+
+Route::post('/insertNews', 'adminController@InsertNews')->name('form.insertnews');
