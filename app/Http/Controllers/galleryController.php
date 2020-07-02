@@ -9,7 +9,7 @@ class galleryController extends Controller
 {
     public function GetData()
     {
-		$data_query_gallery = DBgallery::all();
+		$data_query_gallery = DBgallery::orderBy('id', 'DESC')->get();
 
 		// dd($data_query_gallery);
     	return view('fontend.gallery',
