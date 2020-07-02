@@ -279,7 +279,7 @@
 
 	$(document).ready(function() {
 	    $('#tbcaption').DataTable( {
-			// "order": [[ 0, "desc" ]],
+			"order": [[ 0, "desc" ]],
 			"scrollX": true
 	    });
 	});
