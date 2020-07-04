@@ -96,7 +96,7 @@
                             </a>
                         </div>
                         <div class="services-caption">
-                            <h3><a href="{{ route('caption') }}">caption</a></h3>
+                            <h3><a href="{{ route('caption') }}">Caption</a></h3>
                             <p class="pera1">แคปชั่น</p>
                             <p class="pera2">แคปชั่น</p>
                         </div>
@@ -111,7 +111,7 @@
                             </a>
                         </div>
                         <div class="services-caption">
-                            <h3><a href="{{ route('gallery') }}">gallery</a></h3>
+                            <h3><a href="{{ route('gallery') }}">Gallery</a></h3>
                             <p class="pera1">แกลอรี่</p>
                             <p class="pera2">แกลอรี่</p>
                         </div>
