@@ -15,6 +15,10 @@
 //     return view('fontend.index');
 // });
 
+Route::get('/ebook)', function () {
+     return view('fontend.ebook');
+});
+
 Route::get('/', 'indexController@GetData')->name('index');
 Route::get('/source', 'sourceController@GetData')->name('source');
 Route::get('/history', 'historyController@GetData')->name('history');
