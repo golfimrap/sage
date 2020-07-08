@@ -29,7 +29,9 @@
 					<div class="col-lg-4 col-md-6 col-sm-10">
 						<div class="single-services mb-200">
 							<div class="services-img">
-								<img src="{{URL::asset('storage/img/caption/'.$value_caption->caption_pic)}}" alt="">
+								<a href="{{URL::asset('storage/img/caption/'.$value_caption->caption_pic)}}">
+									<img src="{{URL::asset('storage/img/caption/'.$value_caption->caption_pic)}}" alt="">
+								</a>
 							</div>
 							<div class="services-caption">
 								<h3><a href="#">{{ $value_caption->topic_caption }}</a></h3>
