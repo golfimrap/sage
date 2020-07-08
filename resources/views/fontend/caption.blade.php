@@ -34,13 +34,14 @@
 								</a>
 							</div>
 							<div class="services-caption">
-								<h3><a href="#">{{ $value_caption->topic_caption }}</a></h3>
+								<h3><a href="{{URL::asset('storage/img/caption/'.$value_caption->caption_pic)}}">{{ $value_caption->topic_caption }}</h3>
 								<p class="pera1">
 									{{ $value_caption->para1 }}
 								</p>
 								<p class="pera2">
 									{{ $value_caption->para2 }}
 								</p>
+								</a>
 							</div>
 						</div>
 					</div>
