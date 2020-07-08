@@ -15,7 +15,7 @@
                                 <li><a href="{{ ('/') }}">หน้าหลัก</a></li>
                                <!--  <li><a>คณะที่ปรึกษา</a>
                                     <ul class="submenu"> -->
-                                        <li><a href="{{ route('source') }}">ที่ปรึกษา</a></li>
+                                        <li><a href="{{ route('source') }}">คณะที่ปรึกษา</a></li>
                                         <!-- <li><a href="{{ route('history') }}">ที่ปรึกษา</a></li> -->
                                    <!--  </ul>
                                 </li> -->
