@@ -6,7 +6,7 @@
     <title>คณะที่ปรึกษารัฐมนตรีว่าการกระทรวงสาธารณสุข</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="manifest" href="{{URL::asset('site.webmanifest')}}">
+    <!-- <link rel="manifest" href="{{URL::asset('site.webmanifest')}}"> -->
     <link rel="shortcut icon" type="image/x-icon" href="{{URL::asset('assets/img/favicon.ico')}}">
 
     <!-- CSS here -->
