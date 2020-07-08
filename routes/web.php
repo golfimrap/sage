@@ -15,10 +15,6 @@
 //     return view('fontend.index');
 // });
 
-Route::get('/ebook)', function () {
-     return view('fontend.ebook');
-});
-
 Route::get('/', 'indexController@GetData')->name('index');
 Route::get('/source', 'sourceController@GetData')->name('source');
 Route::get('/history', 'historyController@GetData')->name('history');
@@ -28,6 +24,9 @@ Route::get('/gallery', 'galleryController@GetData')->name('gallery');
 Route::get('/timeline', 'timelineController@GetData')->name('timeline');
 Route::get('/contact', 'contactController@GetData')->name('contact');
 Route::get('/news', 'newsController@GetData')->name('news');
+Route::get('/ebook', function () {
+     return view('fontend.ebook');
+});
 
 Route::get('/admin', 'adminController@GetData')->name('admin');
 
