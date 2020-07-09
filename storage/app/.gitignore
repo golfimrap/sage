@@ -1,4 +1,4 @@
 *
 !public/
 !.gitignore
-git rm -f .env
+!.env
