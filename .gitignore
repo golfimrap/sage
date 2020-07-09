@@ -1,1 +1,4 @@
-.env
+*
+!public/
+!.gitignore
+!.env
