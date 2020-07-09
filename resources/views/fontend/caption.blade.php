@@ -20,7 +20,7 @@
 				<div class="cl-xl-7 col-lg-8 col-md-10">
 					<div class="section-tittle text-center mb-70">
 						<span>แทนทำขอบคุณ</span>
-						<h2>คำขอบคุณและให้กำลังใจ</h2>
+						<h2>คำขอบคุณและให้กำลังใ</h2>
 					</div>
 				</div>
 			</div>
