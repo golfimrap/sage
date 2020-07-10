@@ -28,6 +28,7 @@ Route::get('/ebook', function () {
      return view('fontend.ebook');
 });
 
+
 Route::get('/admin', 'adminController@GetData')->name('admin');
 
 Route::post('/insertAdvisor', 'adminController@InsertData')->name('form.insertadvisor');
