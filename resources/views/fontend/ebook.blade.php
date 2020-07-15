@@ -66,7 +66,6 @@
       </div>
     </div>
 
-
         <div class="main-panel">
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
@@ -129,9 +128,11 @@
                         <label>ประเภทการค้นหา:</label>
                           <select type="option" class="form-control" placeholder="" >
                               <option>--กรุณาเลือก--</option>
-                              <option>ชื่อเรื่อง</option>
-                              <option>ชื่อผู้แต่ง</option>
-                              <option>คำค้น</option>
+                              @foreach($data_type_search as $value_type_search)
+                                <option value="{{ $value_type_search->id }}">
+                                  {{ $value_type_search->type_search }}
+                                </option>
+                              @endforeach
                           </select>
                       </div>
 
@@ -139,30 +140,14 @@
                     </div>
                     <div class="col-md-4 px-1">
                       <div class="form-group">
-                        <label>ปีที่สำเร็จ:</label>
+                        <label>ปีที่ตีพิมพ์:</label>
                           <select type="option" class="form-control" placeholder="" >
                               <option>--กรุณาเลือก--</option>
-                              <option>2550</option>
-                              <option>2551</option>
-                              <option>2552</option>
-                              <option>2553</option>
-                              <option>2554</option>
-                              <option>2555</option>
-                              <option>2556</option>
-                              <option>2557</option>
-                              <option>2558</option>
-                              <option>2559</option>
-                              <option>2560</option>
-                              <option>2561</option>
-                              <option>2562</option>
-                              <option>2563</option>
-                              <option>2564</option>
-                              <option>2565</option>
-                              <option>2566</option>
-                              <option>2567</option>
-                              <option>2568</option>
-                              <option>2569</option>
-                              <option>2570</option>                         
+                              @foreach($data_years as $value_years)
+                                <option value="{{ $value_years->id }}">
+                                  {{ $value_years->years }}
+                                </option>
+                              @endforeach                         
 
                           </select>
                       </div>
@@ -170,52 +155,14 @@
 
                     <div class="col-md-4 pl-1">
                       <div class="form-group">
-                        <label for="exampleInputEmail1">หน่วยงาน:</label>
+                        <label for="exampleInputEmail1">ISBN:</label>
                           <select type="option" class="form-control" placeholder="" >
-                              <option>--กรุณาเลือก--</option>
-                              <option>กลุ่มคุ้มครองจริยธรรม</option>
-                              <option>กลุ่มตรวจสอบภายใน</option>
-                              <option>กลุ่มพัฒนาระบบบริหาร</option>
-                              <option>กองกฎหมาย</option>
-                              <option>กองควบคุมโรคและภัยสุขภาพในภาวะฉุกเฉิน</option>
-                              <option>กองงานคณะกรรมการควบคุมผลิตภัณฑ์ยาสูบ</option>
-                              <option>กองนวัตกรรมและวิจัย</option>
-                              <option>กองบริหารการคลัง</option>
-                              <option>องบริหารทรัพยากรบุคคล</option>
-                              <option>กองยุทธศาสตร์และแผนงาน</option>
-                              <option>กองระบาดวิทยา</option>
-                              <option>กองโรคจากการประกอบอาชีพและสิ่งแวดล้อม</option>
-                              <option>กองโรคติดต่อทั่วไป</option>
-                              <option>กองโรคติดต่อนำโดยแมลง</option>
-                              <option>กองโรคป้องกันด้วยวัคซีน</option>
-                              <option>กองโรคไม่ติดต่อ</option>
-                              <option>กองโรคเอดส์และโรคติดต่อทางเพศสัมพันธ์</option>
-                              <option>กองวัณโรค</option>
-                              <option>ศูนย์พัฒนาวิชาการอาชีวอนามัยและสิ่งแวดล้อมจังหวัดสมุทรปราการ</option>
-                              <option>ศูนย์สารสนเทศ</option>
-                              <option>สถาบันบำราศนราดูร</option>     
-                              <option>สถาบันป้องกันควบคุมโรคเขตเมือง</option>
-                              <option>สถาบันราชประชาสมาสัย</option>
-                              <option>สถาบันเวชศาสตร์ป้องกันศึกษา</option>
-                              <option>สำนักงานคณะกรรมการควบคุมเครื่องดื่มแอลกอฮอล์</option>
-                              <option>สำนักงานคณะกรรมการผู้ทรงคุณวุฒิ</option>
-                              <option>สำนักงานความร่วมมือระหว่างประเทศ</option>
-                              <option>สำนักงานบริหารโครงการกองทุนโลก</option>
-                              <option>สำนักงานเลขานุการกรม</option>
-                              <option>สำนักสื่อสารความเสี่ยงและพัฒนาพฤติกรรมสุขภาพ</option>
-                              <option>ศูนย์นวตกรรมด้านสุขภาพและการป้องกันควบคุมโรค</option>
-                              <option>สำนักงานป้องกันควบคุมโรคที่ 1 เชียงใหม่</option>
-                              <option>สำนักงานป้องกันควบคุมโรคที่ 2 พิษณุโลก</option>
-                              <option>สำนักงานป้องกันควบคุมโรคที่ 3 นครสวรรค์</option>
-                              <option>สำนักงานป้องกันควบคุมโรคที่ 4 สระบุรี</option>
-                              <option>สำนักงานป้องกันควบคุมโรคที่ 5 ราชบุรี</option>
-                              <option>สำนักงานป้องกันควบคุมโรคที่ 6 ชลบุรี</option>
-                              <option>สำนักงานป้องกันควบคุมโรคที่ 7 ขอนแก่น</option>
-                              <option>สำนักงานป้องกันควบคุมโรคที่ 8 อุดรธานี</option>
-                              <option>สำนักงานป้องกันควบคุมโรคที่ 9 นครราชสีมา</option>
-                              <option>สำนักงานป้องกันควบคุมโรคที่ 10 อุบลราชธานี</option>
-                              <option>สำนักงานป้องกันควบคุมโรคที่ 11 นครศรีธรรมราช</option>                     
-                              <option>สำนักงานป้องกันควบคุมโรคที่ 12 สงขลา</option>  
+                            <option>--กรุณาเลือก--</option>
+                              @foreach($data_isbn as $value_isbn)
+                                <option value="{{ $value_isbn->id }}">
+                                  {{ $value_isbn->isbn}}
+                                </option>
+                              @endforeach    
                           </select>
                       </div>
                     </div>
@@ -233,14 +180,11 @@
                         <label>ประเภทกลุ่มโรค</label>
                         <select type="option" class="form-control" placeholder="" >
                               <option>--กรุณาเลือก--</option>
-                              <option>CD</option>
-                              <option>NCD</option>
-                              <option>Injury</option>
-                              <option>Aids and TB</option>
-                              <option>Envocc </option>
-                              <option>Behavior</option>
-                              <option>Support</option>
-                              <option>Management</option>                               
+                               @foreach($data_disease as $value_disease)
+                                <option value="{{ $value_disease->id }}">
+                                  {{ $value_disease->disease }}
+                                </option>
+                              @endforeach                     
                           </select>
                       </div>
                     </div>
@@ -286,123 +230,50 @@
                       <th>
                         ISBN
                       </th>
-                        
-                      </th>
+                      <th>
+                        อ่านออนไลน์
+                      </th>    
+                      <th>
+                        ดาวน์โหลด
+                      </th>                   
                     </thead>
+                    @foreach($data_ebook as $value_ebook)
+                        <tr>
+                            <td>
+                                {{ $value_ebook->id }}
+                            </td>
+                            <td> 
+                                <img src="{{URL::asset('assets/img/cover/'.$value_ebook->cover_pic)}}" alt="" height="180">                            
+                            </td>
+
+                            <td>
+                                {{ $value_ebook->topic }}
+                            </td>
+                            <td>
+                                {{ $value_ebook->publish }}
+                            </td>
+                            <td>
+                                {{ $value_ebook->ISBN }}
+                            </td>
+                            <td>
+                                <div class="row">
+                                  <div class="update ml-auto mr-auto">
+                                    <a target="_blank" href="{{ $value_ebook->url }}" class="btn btn-round btn-primary">คลิกอ่าน</a>                                     
+                                  </div>
+                                </div>
+                            </td>
+
+                            <td> 
+                                <a href="{{URL::asset('assets/file/ebook/'.$value_ebook->download)}}">                                    
+                              <label class="btn"><i class="fa fa-download"></i> Download</label></a>                      
+                            </td>
+
+                        </tr>
+                    @endforeach
 
 
 
-
-                      <tr>
-                         <td>
-                           1
-                         </td>                 
-                                              
-                        <td>
-                          pig รูปปกหนังสือ
-
-                        </td>
-                        <td>
-                           การจัดการปัญหาโรคติดเชื้อไวรัสโคโรนา 2019:การเปลี่ยนผ่านจากมาตรการ “กึ่งล็อกดาวน์” เข้าสู่มาตรการ “สร้างเสถียรภาพ”
-                        </td>                        
-                        <td>
-                          พฤษภาคม 2563
-                        </td>  
-                        <td>
-                          978-616-11-4267-4
-                        </td>                       
-                        <td>                        
-                          ปุ่มรายละเอียด
-                        </td>                  
-                    </tr>
-
-
-
-                    
-
-                    
-                      <tr>
-                         <td>
-                           2
-                         </td>                 
-                                              
-                        <td>
-                          pig รูปปกหนังสือ
-
-                        </td>
-                        <td>
-                           การจัดการปัญหาโรคติดเชื้อไวรัสโคโรนา 2019:การเปลี่ยนผ่านจากมาตรการ “กึ่งล็อกดาวน์” เข้าสู่มาตรการ “สร้างเสถียรภาพ”
-                        </td>                        
-                        <td>
-                          พฤษภาคม 2563
-                        </td>  
-                        <td>
-                          978-616-11-4266-7
-                        </td>                       
-                        <td>                        
-                          ปุ่มรายละเอียด
-                        </td>                  
-                    </tr>
-
-                        
-                      </tr>
-                      </tr>
-
-
-
-                         <td>
-                           3
-                         </td>                 
-                                              
-                      <td>
-                          pig รูปปกหนังสือ
-
-                        </td>
-                        <td>
-                           การจัดการปัญหาโรคติดเชื้อไวรัสโคโรนา 2019:การเปลี่ยนผ่านจากมาตรการ “กึ่งล็อกดาวน์” เข้าสู่มาตรการ “สร้างเสถียรภาพ”
-                        </td>                        
-                        <td>
-                          พฤษภาคม 2563
-                        </td>  
-                        <td>
-                          978-616-11-4269-8
-                        </td>                       
-                        <td>                        
-                          ปุ่มรายละเอียด
-                        </td>                  
-                  
-                     </tr>
-                     </tr>               
-
-
-
-
-                         <td>
-                           4
-                         </td>                 
-<td>
-                          pig รูปปกหนังสือ
-
-                        </td>
-                        <td>
-                           การจัดการปัญหาโรคติดเชื้อไวรัสโคโรนา 2019:การเปลี่ยนผ่านจากมาตรการ “กึ่งล็อกดาวน์” เข้าสู่มาตรการ “สร้างเสถียรภาพ”
-                        </td>                        
-                        <td>
-                          พฤษภาคม 2563
-                        </td>  
-                        <td>
-                          -
-                        </td>                       
-                        <td>                        
-                          ปุ่มรายละเอียด
-                        </td>                  
-                    </tr>
-
-
-                      </tr>
-
-                                            
-                      </tr>
+                      
                     </tbody>
                   </table>
                 </div>
