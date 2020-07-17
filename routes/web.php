@@ -43,3 +43,14 @@ Route::get('deleteGallery/{id}', 'adminController@DestroyGallery')->name('delete
 
 Route::post('/insertNewsVDO', 'adminController@InsertNewsVDO')->name('form.insertnewsvdo');
 Route::post('/insertNewsText', 'adminController@InsertNewsText')->name('form.insertnewstext');
+
+Route::get('/clear-cache',function(){
+	Artisan::call('cache:clear');
+	return "Cache is cleared";
+});
+
+Route::get('/clear-view',function(){
+	Artisan::call('view:clear');
+	return "View is cleared";
+});
+		
