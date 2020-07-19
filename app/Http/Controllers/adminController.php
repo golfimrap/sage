@@ -207,7 +207,7 @@ class adminController extends Controller
         	$filename_gallery_pic = time(). '.' . $file_gallery_pic->getClientOriginalExtension();
        		// save to storage/app/photos as the new $filename
        		// dd($filename_person_pic);
-        	$upload = $file_gallery_pic->storeAs('storage/img/gallery', $filename_gallery_pic);
+        	$upload = $file_gallery_pic->storeAs('public/img/gallery', $filename_gallery_pic);
         	// dd($filename_poster_pic);
       	}else{
         	$filename_gallery_pic = NULL;
