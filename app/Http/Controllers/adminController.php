@@ -91,7 +91,7 @@ class adminController extends Controller
     	$rules = [
     		'topic'			=>	'required',
 	        'poster_date' 	=>	'required',
-	        'poster_pic'	=>	'required|image|mimes:jpeg,png,jpg,gif,svg|max:4048'
+	        'poster_pic'	=>	'required|image|mimes:jpeg,png,jpg,gif,svg'
       	];
 
       	$validator = Validator::make($req->all(), $rules);
@@ -138,7 +138,7 @@ class adminController extends Controller
     		'topic_caption'	=>	'required',
 	        'para1' 		=>	'required',
 	        'para2'			=>	'required',
-	        'caption_pic'	=>	'required|image|mimes:jpeg,png,jpg,gif,svg|max:4048'
+	        'caption_pic'	=>	'required|image|mimes:jpeg,png,jpg,gif,svg'
       	];
 
       	$validator = Validator::make($req->all(), $rules);
