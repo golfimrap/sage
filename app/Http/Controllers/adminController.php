@@ -362,6 +362,7 @@ class adminController extends Controller
       	$del_clean = File::delete($path_post);
 
       	DBcaption::where('id', $id)->delete();
+        
 
       	return redirect()->route('admin');
     }
