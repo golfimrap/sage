@@ -6,6 +6,7 @@
     <title>คณะที่ปรึกษารัฐมนตรีว่าการกระทรวงสาธารณสุข</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    @yield('dataTable')
     <!-- <link rel="manifest" href="{{URL::asset('site.webmanifest')}}"> -->
     <link rel="shortcut icon" type="image/x-icon" href="{{URL::asset('assets/img/favicon.ico')}}">
 
@@ -23,6 +24,7 @@
     <link rel="stylesheet" href="{{URL::asset('assets/css/style.css')}}">
 
     @yield('timelinecss')
+    
 </head>
 <body class="body-bg">
 	@include('layouts.menubar.menu')
@@ -70,3 +72,11 @@
     <script src="{{URL::asset('./assets/js/main.js')}}"></script>
 </body>
 </html>
+<script type="text/javascript">
+        $(document).ready(function() {
+            $('#tbebook').DataTable( {
+                // "order": [[ o, "desc" ]]
+                "scrollX": true
+            });
+        });
+    </script>

@@ -134,6 +134,15 @@
 		<label>Paragraph 2</label><br/>
 		<textarea name="para2"></textarea><br/>
 		<input type="file" name="caption_pic"><br/>
+		<label>ชื่อเจ้าของ Caption :: </label>
+		<select name="advisor_id">
+			@foreach($data_advisor as $value_advisor)
+				<option value="{{ $value_advisor->id }}">
+					{{ $value_advisor->name }} {{ $value_advisor->surname }}
+				</option>
+			@endforeach
+		</select>
+		<br><br>
 		<input type="submit" value="submit">
 	</form>
 	<h3><center>Delete Data Caption</center></h3><br/>
