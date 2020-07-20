@@ -184,7 +184,7 @@ class adminController extends Controller
     public function InsertGallery(Request $req)
     {
     	$rules = [
-	        'gallery_pic'	=>	'required|image|mimes:jpeg,png,jpg,gif,svg|max:4048'
+	        'gallery_pic'	=>	'required|image|mimes:jpeg,png,jpg,gif,svg'
       	];
 
       	$validator = Validator::make($req->all(), $rules);
