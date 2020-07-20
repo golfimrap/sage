@@ -53,5 +53,3 @@ Route::get('/clear-view',function(){
 	Artisan::call('view:clear');
 	return "View is cleared";
 });
-sdfss
-		
