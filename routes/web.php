@@ -53,3 +53,9 @@ Route::get('/clear-view',function(){
 	Artisan::call('view:clear');
 	return "View is cleared";
 });
+
+
+Route::get('/clear',function(){
+	ResponseCache::clear();
+	return "is cleared";
+});
