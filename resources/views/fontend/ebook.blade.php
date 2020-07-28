@@ -69,7 +69,7 @@
                                     {{ $value_ebook->publish }}
                                 </td>
                                 <td>
-                                    {{ $value_ebook->ISBN }}
+                                    {{ $value_ebook->isbn }}
                                 </td>
                                 <td>
                                     <div class="row">
