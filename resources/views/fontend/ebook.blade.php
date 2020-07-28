@@ -81,8 +81,8 @@
                                 <td> 
                                     <div class="row">
                                         <div class="update ml-auto mr-auto">
-                                            <a href="{{URL::asset('storage/file/ebook/'.$value_ebook->download)}}" class="btn btn-round btn-primary">
-                                                <label class="btn"><i class="fa fa-download"></i> Download</label>
+                                            <a target="_blank" href="{{URL::asset('storage/file/ebook/'.$value_ebook->download)}}" class="btn btn-round btn-primary">
+                                                <i class="fa fa-download"></i> Download
                                             </a>
                                         </div>
                                     </div>
