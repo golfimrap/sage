@@ -22,7 +22,8 @@
                                 <li><a href="{{ route('timeline') }}">ไทม์ไลน์</a></li>
                                 <li><a>เอกสารเผยแพร่</a>
                                     <ul class="submenu">
-                                        <li><a href="{{ URL::to('https://fliphtml5.com/bookcase/dmkfb') }}" target="_blank">บทความ / Article</a></li>
+                                        <!-- <li><a href="{{ URL::to('https://fliphtml5.com/bookcase/dmkfb') }}" target="_blank">บทความ / Article</a></li> -->
+                                        <li><a href="{{ route('ebook') }}">บทความ / Article</a></li>
                                         <li><a href="{{ route('poster') }}">โปสเตอร์ / Poster</a></li>
                                         <li><a href="{{ route('caption') }}">แคปชั่น / Caption</a></li>
                                         <li><a href="{{ route('gallery') }}">แกลอรี่ / Gallery</a></li>
