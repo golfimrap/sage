@@ -34,7 +34,7 @@
 								</a>
 							</div>
 							<div class="services-caption">
-								<h3><a href="{{URL::asset('storage/img/consult/'.$value_advisor->advisor_pic)}}">{{ $value_advisor->prefix }}{{ $value_advisor->name }} {{ $value_advisor->surname }}</a></h3>
+								<h3><a href="{{URL::asset('storage/img/consultant/'.$value_advisor->advisor_pic)}}">{{ $value_advisor->prefix }}{{ $value_advisor->name }} {{ $value_advisor->surname }}</a></h3>
 								<p class="pera1">{{ $value_advisor->position }}</p>
 								<p class="pera2">{{ $value_advisor->position }}</p>
 							</div>

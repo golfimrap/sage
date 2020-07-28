@@ -3,27 +3,27 @@
 <main>
 	<div class="slider-area">
         <div class="slider-active dot-style">
-            <!-- Single Slider -->
+            
             <div class="single-slider slider-height hero-overly d-flex align-items-center">
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-6 col-lg-6">
                             <div class="hero__caption">
-                                <span data-animation="fadeInLeft" data-delay=".4s">คณะที่ปรึกษารัฐมนตรีว่าการกระทรวงสาธารณสุข</span>
-                                <h5 data-animation="fadeInLeft" data-delay=".6s">เกี่ยวกับภาวะฉุกเฉินด้านการแพทย์ และสาธารณสุข <br>กรณีโรคปอดอักเสบจากเชื้อไวรัสโคโรนา 2019</h5>
+                               <!--  <span data-animation="fadeInLeft" data-delay=".4s">คณะที่ปรึกษารัฐมนตรีว่าการกระทรวงสาธารณสุข</span>
+                                <h5 data-animation="fadeInLeft" data-delay=".6s">เกี่ยวกับภาวะฉุกเฉินด้านการแพทย์ และสาธารณสุข <br>กรณีโรคปอดอักเสบจากเชื้อไวรัสโคโรนา 2019</h5> -->
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Single Slider -->
+           
             <div class="single-slider slider-height hero-overly d-flex align-items-center">
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-6 col-lg-6">
                             <div class="hero__caption">
-                                <span data-animation="fadeInLeft" data-delay=".4s">เว็บไซต์คณะที่ปรึกษารัฐมนตรีว่าการกระทรวงสาธารณสุข</span>
-                                <h1 data-animation="fadeInLeft" data-delay=".6s">เกี่ยวกับภาวะฉุกเฉินด้านการแพทย์ และสาธารณสุข <br>กรณีโรคปอดอักเสบจากเชื้อไวรัสโคโรนา 2019</h1>
+                               <!--  <span data-animation="fadeInLeft" data-delay=".4s">เว็บไซต์คณะที่ปรึกษารัฐมนตรีว่าการกระทรวงสาธารณสุข</span>
+                                <h1 data-animation="fadeInLeft" data-delay=".6s">เกี่ยวกับภาวะฉุกเฉินด้านการแพทย์ และสาธารณสุข <br>กรณีโรคปอดอักเสบจากเชื้อไวรัสโคโรนา 2019</h1> -->
                             </div>
                         </div>
                     </div>
