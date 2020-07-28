@@ -269,6 +269,24 @@
 		<input type="hidden" name="type" value="text"><br/>
 		<input type="submit" value="submit">
 	</form><br/><br/>
+	<hr>
+	<h3><center>Add Ebook</center></h3><br/>
+	<form method="post" action="{{ route('form.insertebook') }}" enctype="multipart/form-data">
+		{{ csrf_field() }}
+		<label>รูปปกหนังสือ :: </label>
+		<input type="file" name="cover_pic"><br/>
+		<label>ชื่อเรื่อง :: </label><br/>
+		<textarea name="topic"></textarea><br/>
+		<label>ตีพิมพ์ :: </label>
+		<input type="txt" name="publish"><br/>
+		<label>ISBN :: </label>
+		<input type="txt" name="isbn"><br/>
+		<label>url :: </label>
+		<input type="txt" name="url"><br/>
+		<label>download :: </label>
+		<input type="file" name="download"><br/>
+		<input type="submit" value="submit">
+	</form>
 </body>
 </html>
 <script type="text/javascript">

@@ -43,6 +43,7 @@ Route::get('deleteGallery/{id}', 'adminController@DestroyGallery')->name('delete
 
 Route::post('/insertNewsVDO', 'adminController@InsertNewsVDO')->name('form.insertnewsvdo');
 Route::post('/insertNewsText', 'adminController@InsertNewsText')->name('form.insertnewstext');
+Route::post('/insertEbook', 'adminController@insertEbook')->name('form.insertebook');
 
 Route::get('/clear-cache',function(){
 	Artisan::call('cache:clear');

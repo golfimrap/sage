@@ -60,7 +60,7 @@
                                     {{ $value_ebook->id }}
                                 </td>
                                 <td> 
-                                     <img src="{{URL::asset('assets/img/cover/'.$value_ebook->cover_pic)}}" alt="" height="180">  
+                                     <img src="{{URL::asset('storage/img/ebook/'.$value_ebook->cover_pic)}}" alt="" height="180">  
                                  </td>
                                  <td>
                                     {{ $value_ebook->topic }}
@@ -79,9 +79,13 @@
                                     </div>
                                 </td>
                                 <td> 
-                                    <a href="{{URL::asset('assets/file/ebook/'.$value_ebook->download)}}">
-                                        <label class="btn"><i class="fa fa-download"></i> Download</label>
-                                    </a>
+                                    <div class="row">
+                                        <div class="update ml-auto mr-auto">
+                                            <a href="{{URL::asset('storage/file/ebook/'.$value_ebook->download)}}" class="btn btn-round btn-primary">
+                                                <label class="btn"><i class="fa fa-download"></i> Download</label>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </td>
                             </tr>
                             @endforeach
@@ -97,7 +101,7 @@
 <script type="text/javascript">
         $(document).ready(function() {
             $('#tbebook').DataTable( {
-                // "order": [[ o, "desc" ]]
+                "order": [[ 0, "desc" ]]
                 "scrollX": true
             });
         });

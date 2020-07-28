@@ -9,6 +9,7 @@ use App\DBposter;
 use App\DBcaption;
 use App\DBgallery;
 use App\DBnews;
+use App\DBebook;
 use Validator;
 use redirect;
 use File;
@@ -309,6 +310,74 @@ class adminController extends Controller
 
         DBnews::insert($data);
 
+        return redirect()->route('admin');
+    }
+
+    public function insertEbook(Request $req)
+    {
+        $rules = [
+            'cover_pic' =>  'required',
+            'topic'     =>  'required',
+            'publish'   =>  'required',
+            'isbn'      =>  'required',
+            'url'       =>  'required',
+            'download'  =>  'required'
+        ];
+
+        $validator = Validator::make($req->all(), $rules);
+
+        if ($validator->fails()) {
+            return response()->json([
+                'status'    =>  'error',
+                'message'   =>  'error_require_data'
+            ]);
+        }
+
+        if($req->hasFile('cover_pic')){
+            // cache the file
+            $file_cover_pic = $req->file('cover_pic');
+            if (!$file_cover_pic->isValid()){ // now check if it's valid
+                return back()->with('error', $file->getErrorMessage());
+            }
+            // generate a new filename. getClientOriginalExtension() for the file extension
+            $filename_cover_pic = time(). '.' . $file_cover_pic->getClientOriginalExtension();
+            // save to storage/app/photos as the new $filename
+            // dd($filename_person_pic);
+            $upload = $file_cover_pic->storeAs('public/img/ebook', $filename_cover_pic);
+            // dd($filename_poster_pic);
+        }else{
+            $filename_cover_pic = NULL;
+            // dd($filename_poster_pic);
+        }
+
+        if($req->hasFile('download')){
+            // cache the file
+            $file_download = $req->file('download');
+            if (!$file_download->isValid()){ // now check if it's valid
+                return back()->with('error', $file->getErrorMessage());
+            }
+            // generate a new filename. getClientOriginalExtension() for the file extension
+            $filename_download_ebook = time(). '.' . $file_download->getClientOriginalExtension();
+            // save to storage/app/photos as the new $filename
+            // dd($filename_person_pic);
+            $upload = $file_download->storeAs('public/file/ebook', $filename_download_ebook);
+            // dd($filename_poster_pic);
+        }else{
+            $filename_download_ebook = NULL;
+            // dd($filename_poster_pic);
+        }
+
+        $data = array
+                (
+                    'cover_pic'     =>  $filename_cover_pic,
+                    'topic'         =>  $req->post('topic'),
+                    'publish'       =>  $req->post('publish'),
+                    'isbn'          =>  $req->post('isbn'),
+                    'url'           =>  $req->post('url'),
+                    'download'      =>  $filename_download_ebook
+                );
+
+        DBebook::insert($data);
         return redirect()->route('admin');
     }
 
