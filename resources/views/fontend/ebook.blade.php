@@ -101,7 +101,7 @@
 <script type="text/javascript">
         $(document).ready(function() {
             $('#tbebook').DataTable( {
-                "order": [[ 0, "desc" ]]
+                "order": [[ 0, "desc" ]],
                 "scrollX": true
             });
         });
