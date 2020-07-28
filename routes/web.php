@@ -55,7 +55,6 @@ Route::get('/clear-view',function(){
 	return "View is cleared";
 });
 
-
 Route::get('/clear',function(){
 	ResponseCache::clear();
 	return "is cleared";
