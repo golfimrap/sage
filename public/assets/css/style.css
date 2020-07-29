@@ -552,7 +552,7 @@ hr {
 /* line 290, ../../../sponDon TI/Running Project/263.InteriorDesign_HTML/HTML/assets/scss/_common.scss */
 .btn:hover::before {
   transform: scaleX(1);
-  /*color: #000000 !important;*/
+  color: #000000 !important;
   z-index: -1;
 }
 
