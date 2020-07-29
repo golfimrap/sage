@@ -69,7 +69,7 @@
                                     {{ $value_ebook->publish }}
                                 </td>
                                 <td>
-                                    {{ $value_ebook->ISBN }}
+                                    {{ $value_ebook->isbn }}
                                 </td>
                                 <td>
                                     <div class="row">
@@ -101,7 +101,7 @@
 <script type="text/javascript">
         $(document).ready(function() {
             $('#tbebook').DataTable( {
-                "order": [[ 0, "desc" ]]
+                "order": [[ 0, "desc" ]],
                 "scrollX": true
             });
         });
