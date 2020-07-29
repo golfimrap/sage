@@ -56,7 +56,25 @@
 				</div>
 			</div>
 			<div class="row">
-				@foreach($data_advisor as $value_advisor)
+				
+				@foreach($data_advisor as $key => $value_advisor)
+					@if( $key == 0)
+						<div class="row col-12">
+							 <div class="section-tittle text-center">
+								
+								<h2>คณะผู้จัดทำข้อเสนอ</h2>
+							</div>
+						</div>
+					@endif
+					
+					@if($key == 3)
+						<div class="row col-12">
+							 <div class="section-tittle text-center">
+								
+								<h2>คณะที่ปรึกษารัฐมนตรีว่าการกระทรวงสาธารณสุขเกี่ยวกับภาวะฉุกเฉินด้านการแพทย์และสาธารณสุข          กรณีโรคปอดอักเสบจากเชื้อไวรัสโคโรนาสายพันธุ์ใหม่ 2019</h2>
+							</div>
+						</div>
+					@endif
 					<div class="col-lg-4 col-md-6 col-sm-10">
 						<div class="single-services mb-200">
 							<div class="services-img">
@@ -65,7 +83,7 @@
 								</a>
 							</div>
 							<div class="services-caption">
-								<h3><a href="{{asset('storage/img/consult/'.$value_advisor->advisor_pic)}}">{{ $value_advisor->prefix }}{{ $value_advisor->name }} {{ $value_advisor->surname }}</a></h3>
+								<h3><a href="{{asset('storage/img/consult/'.$value_advisor->advisor_pic)}}">{{ $value_advisor->prefix }}{{ $value_advisor->name }} {{ $value_advisor->surname }} </a></h3>
 								<p class="pera1">{{ $value_advisor->position }}</p>
 								<p class="pera2">{{ $value_advisor->position }}</p>
 							</div>
