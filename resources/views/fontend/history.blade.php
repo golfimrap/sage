@@ -20,7 +20,7 @@
 				<div class="cl-xl-7 col-lg-8 col-md-10">
 					<div class="section-tittle text-center mb-70">
 						<span>Advisory Board of the Minister of Public Health</span>
-						<h2>คณะที่ปรึกษารัฐมนตรีว่าการกระทรวงสาธารณสุข</h2>
+						<h2>คณะที่ปรึกษารัฐมนตรีว่าการกระทรวงสาธารณสุขเกี่ยวกับภาวะฉุกเฉินด้านการแพทย์และสาธารณสุข          กรณีโรคปอดอักเสบจากเชื้อไวรัสโคโรนาสายพันธุ์ใหม่ 2019</h2>
 					</div>
 				</div>
 			</div>

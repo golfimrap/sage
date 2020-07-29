@@ -25,6 +25,9 @@ Route::get('/timeline', 'timelineController@GetData')->name('timeline');
 Route::get('/contact', 'contactController@GetData')->name('contact');
 Route::get('/news', 'newsController@GetData')->name('news');
 Route::get('/ebook', 'ebookController@GetData')->name('ebook');
+Route::get('/consult', function () {
+    return view('fontend.consultant_ananchai');
+})->name('consult');
 
 
 Route::get('/admin', 'adminController@GetData')->name('admin');

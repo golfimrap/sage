@@ -29,7 +29,7 @@
                                         <li><a href="{{ route('gallery') }}">แกลอรี่ / Gallery</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">ข้อคิดที่ปรึกษา</a></li>
+                                <li><a href="{{ route('consult') }}">ข้อคิดที่ปรึกษา</a></li>
                                 <li><a href="{{ route('news') }}">ข่าวที่น่าสนใจ</a></li>
                             </ul>
                         </nav>
