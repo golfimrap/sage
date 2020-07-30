@@ -56,7 +56,9 @@
 				</div>
 			</div>
 			<div class="row">
-				
+				<?php
+					// dd($data_advisor); 
+				?>
 				@foreach($data_advisor as $key => $value_advisor)
 					@if( $key == 0)
 						<div class="row col-12">
@@ -75,6 +77,7 @@
 							</div>
 						</div>
 					@endif
+					
 					<div class="col-lg-4 col-md-6 col-sm-10">
 						<div class="single-services mb-200">
 							<div class="services-img">
