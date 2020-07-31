@@ -139,7 +139,8 @@ class adminController extends Controller
     		'topic_caption'	=>	'required',
 	        'para1' 		=>	'required',
 	        'para2'			=>	'required',
-	        'caption_pic'	=>	'required|image|mimes:jpeg,png,jpg,gif,svg'
+	        'caption_pic'	=>	'required|image|mimes:jpeg,png,jpg,gif,svg',
+            'advisor_id'    =>  'required'
       	];
 
       	$validator = Validator::make($req->all(), $rules);
@@ -174,7 +175,8 @@ class adminController extends Controller
 	    			'topic_caption'			=>	$req->post('topic_caption'),
 	    			'para1'	=>	$req->post('para1'),
 	    			'para2'	=>	$req->post('para2'),
-	    			'caption_pic'	=>	$filename_caption_pic
+	    			'caption_pic'	=>	$filename_caption_pic,
+                    'advisor_id'    =>  $req->post('advisor_id')
 	    		);
 
 	    DBcaption::insert($data);
