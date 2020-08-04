@@ -25,6 +25,7 @@ Route::get('/timeline', 'timelineController@GetData')->name('timeline');
 Route::get('/contact', 'contactController@GetData')->name('contact');
 Route::get('/news', 'newsController@GetData')->name('news');
 Route::get('/ebook', 'ebookController@GetData')->name('ebook');
+Route::get('/ebook/Download/{ebookName}', 'ebookController@ebookDownload')->name('ebookDownload'); //download and readfile change url
 Route::get('/consult', function () {
     return view('fontend.consultant_ananchai');
 })->name('consult');

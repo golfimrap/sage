@@ -20,4 +20,14 @@ class ebookController extends Controller
     					]
     				);
     }
+
+    public function ebookDownload($ebookName)
+    {
+        // dd($ebookName);
+        $ebook = DBebook::where('download', $ebookName)->firstOrFail();
+        // dd($ebook);
+        $pathToFile = storage_path('app/public/file/ebook/' . $ebook->download);
+        // return response()->download($pathToFile);
+        return response()->file($pathToFile);
+    }
 }
