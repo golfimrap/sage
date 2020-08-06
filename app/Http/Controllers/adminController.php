@@ -179,6 +179,7 @@ class adminController extends Controller
                     'advisor_id'    =>  $req->post('advisor_id')
 	    		);
 
+
 	    DBcaption::insert($data);
 
     	return redirect()->route('admin');
