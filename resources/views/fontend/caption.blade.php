@@ -19,7 +19,7 @@
 			<div class="row justify-content-center">
 				<div class="cl-xl-7 col-lg-8 col-md-10">
 					<div class="section-tittle text-center mb-70">
-						<span>แทนทำขอบคุณ</span>
+						<span>แทนคำขอบคุณ</span>
 						<h2>คำขอบคุณและให้กำลังใจ</h2>
 					</div>
 				</div>
