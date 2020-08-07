@@ -10,7 +10,7 @@ class captionController extends Controller
 {
     public function GetData()
     {
-    	$data_query_caption = DBcaption::orderBy('id', 'DESC')->get();
+    	$data_query_caption = DBcaption::orderBy('advisor_id','ASC')->orderBy('id','DESC')->get();
     	return view('fontend.caption',
     				[
     					'data_caption'	=>	$data_query_caption
